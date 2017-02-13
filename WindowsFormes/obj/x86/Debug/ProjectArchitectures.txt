@@ -1,1 +1,1 @@
-D:\C#\WindowsFormes\WindowsFormes.csproj;x86
+D:\C#\WindowsFormes\WindowsFormes\WindowsFormes.csproj;x86

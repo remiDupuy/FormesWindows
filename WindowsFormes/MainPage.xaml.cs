@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,34 +32,51 @@ namespace WindowsFormes
         }
 
 
-        private void btnValider_Click(object sender, RoutedEventArgs e)
+        private async void btnValider_Click(object sender, RoutedEventArgs e)
         {
-            this.grille.Children.Clear();
-
-            Shape myShape = null;
-            if (this.cbxForme.SelectionBoxItem.ToString() == "Rectangle")
+            try
             {
-                myShape = new Rectangle();
+                this.grille.Children.Clear();
+
+                Shape myShape = null;
+                if (this.cbxForme.SelectionBoxItem.ToString() == "Rectangle")
+                {
+                    myShape = new Rectangle();
+                }
+                else if (this.cbxForme.SelectionBoxItem.ToString() == "Cercle")
+                {
+                    myShape = new Ellipse();
+                }
+
+                myShape.Fill = ((Couleur)this.cbxInnerColor.SelectedItem).Brush;
+                myShape.Stroke = ((Couleur)this.cbxExternColor.SelectedItem).Brush;
+                myShape.Height = Convert.ToInt32(txtHeight.Text);
+                myShape.Width = Convert.ToInt32(txtWidth.Text);
+
+                this.grille.Children.Add(myShape);
             }
-            else if (this.cbxForme.SelectionBoxItem.ToString() == "Circle")
+            catch (Exception ex)
             {
-                myShape = new Ellipse();
+                String msg = "";
+
+                if(ex.GetType() == typeof(NullReferenceException))
+                {
+                    msg = "Champ(s) manquant(s)";
+                }
+                else if(ex.GetType() == typeof(FormatException))
+                {
+                    msg = "Format incorrect";
+                }
+
+                MessageDialog msgDialog = new MessageDialog(msg);
+                await msgDialog.ShowAsync();
             }
 
-            myShape.Fill = ((Couleur)this.cbxInnerColor.SelectedItem).Brush;
-            myShape.Stroke = ((Couleur)this.cbxExternColor.SelectedItem).Brush;
-            myShape.Height = Convert.ToInt32(txtHeight.Text);
-            myShape.Width = Convert.ToInt32(txtWidth.Text);
-
-            this.grille.Children.Add(myShape);
         }
 
         private void cbxForme_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            /*if (this.cbxForme.SelectionBoxItem.ToString() == "Rectangle")
-            {
-                this.width.Visibility = Visibility.Visible;
-            }*/
+
         }
 
         public void initCouleurs()
