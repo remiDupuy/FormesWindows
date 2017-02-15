@@ -53,6 +53,27 @@ namespace WindowsFormes
                 myShape.Height = Convert.ToInt32(txtHeight.Text);
                 myShape.Width = Convert.ToInt32(txtWidth.Text);
 
+                if(this.cbxTransform.SelectionBoxItem.ToString() == "Translate")
+                {
+                    TranslateTransform translateTransform = new TranslateTransform();
+                    translateTransform.X = Double.Parse(this.txtTranslateHor.Text);
+                    translateTransform.Y = Double.Parse(this.txtTranslateVert.Text);
+                    myShape.RenderTransform = translateTransform;
+                }
+                else if(this.cbxTransform.SelectionBoxItem.ToString() == "Rotate")
+                {
+                    RotateTransform rotateTransform = new RotateTransform();
+                    rotateTransform.Angle = Double.Parse(this.txtRotate.Text);
+                    myShape.RenderTransform = rotateTransform;
+                }
+                else if (this.cbxTransform.SelectionBoxItem.ToString() == "Scale")
+                {
+                    ScaleTransform scaleTrasform = new ScaleTransform();
+                    scaleTrasform.ScaleX = Double.Parse(this.txtScaleHor.Text);
+                    scaleTrasform.ScaleY = Double.Parse(this.txtScaleVert.Text);
+                    myShape.RenderTransform = scaleTrasform;
+                }
+
                 this.grille.Children.Add(myShape);
             }
             catch (Exception ex)
@@ -72,6 +93,8 @@ namespace WindowsFormes
                 await msgDialog.ShowAsync();
             }
 
+            
+
         }
 
         private void cbxForme_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -88,6 +111,33 @@ namespace WindowsFormes
             listColors.Add(new Couleur("Blanc", new SolidColorBrush(Windows.UI.Colors.White)));
             this.cbxInnerColor.DataContext = listColors;
             this.cbxExternColor.DataContext = listColors;
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            this.stackTranslateHor.Visibility = Visibility.Collapsed;
+            this.stackTranslateVert.Visibility = Visibility.Collapsed;
+            this.stackRotate.Visibility = Visibility.Collapsed;
+            this.stackScaleHor.Visibility = Visibility.Collapsed;
+            this.stackScaleVert.Visibility = Visibility.Collapsed;
+
+            ComboBoxItem cbx = (ComboBoxItem)cbxTransform.SelectedItem;
+            String transform = cbx.Content.ToString();
+
+            if(transform == "Translate")
+            {
+                this.stackTranslateHor.Visibility = Visibility.Visible;
+                this.stackTranslateVert.Visibility = Visibility.Visible;
+            } 
+            else if(transform == "Rotate")
+            {
+                this.stackRotate.Visibility = Visibility.Visible;
+            } 
+            else if(transform == "Scale")
+            {
+                this.stackScaleHor.Visibility = Visibility.Visible;
+                this.stackScaleVert.Visibility = Visibility.Visible;
+            }
         }
     }
 }

@@ -8,39 +8,70 @@
     mc:Ignorable="d">
 
     <Grid Background="Black" Margin="0">
-        <StackPanel VerticalAlignment="Top" Padding="20,20,0,0">
-            <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,20">
-                <TextBlock x:Name="lblForme" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Forme :" VerticalAlignment="Center" FontSize="30" Margin="0,0,20,0"/>
-                <ComboBox x:Name="cbxForme" Height="46" Width="166" VerticalAlignment="Center" SelectionChanged="cbxForme_SelectionChanged">
-                    <ComboBoxItem Content="Rectangle" IsSelected="True"/>
-                    <ComboBoxItem Content="Triangle"/>
-                    <ComboBoxItem Content="Cercle"/>
-                </ComboBox>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <StackPanel Padding="20,20,0,0" Margin="0" VerticalAlignment="Center">
+                <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,20">
+                    <TextBlock x:Name="lblForme" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Forme :" VerticalAlignment="Center" FontSize="30" Margin="0,0,20,0"/>
+                    <ComboBox x:Name="cbxForme" Height="46" Width="166" VerticalAlignment="Center" SelectionChanged="cbxForme_SelectionChanged">
+                        <ComboBoxItem Content="Rectangle" IsSelected="True"/>
+                        <ComboBoxItem Content="Cercle"/>
+                    </ComboBox>
 
 
-            </StackPanel>
-            <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,20">
-                <TextBlock x:Name="lblInnerColor" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Couleur intérieure :" VerticalAlignment="Center" FontSize="30" Margin="0,0,20,0"/>
-                <ComboBox x:Name="cbxInnerColor" Height="49" Width="177" VerticalAlignment="Center" ItemsSource="{Binding}" SelectedValuePath="Brush" DisplayMemberPath="Libelle"/>
-            </StackPanel>
-            <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Left" Width="575" Margin="0,0,0,20">
-                <TextBlock x:Name="lblExternColor" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Couleur externe :" VerticalAlignment="Center" FontSize="30" Margin="0,0,20,0"/>
-                <ComboBox x:Name="cbxExternColor" Height="45" Width="208" VerticalAlignment="Center" HorizontalAlignment="Left" ItemsSource="{Binding}" SelectedValuePath="Brush" DisplayMemberPath="Libelle"/>
-
-
-
-            </StackPanel>
-            <StackPanel x:Name="inputs" Height="36" Orientation="Horizontal" Margin="0,0,0,20">
-                <StackPanel x:Name="height" Width="201" Orientation="Horizontal" Margin="0,0,20,0">
-                    <TextBlock TextWrapping="Wrap" Text="Height :" Margin="0,0,10,0" VerticalAlignment="Center"/>
-                    <TextBox x:Name="txtHeight" TextWrapping="Wrap" Text="" Width="126"/>
                 </StackPanel>
-                <StackPanel x:Name="width" Width="260" Orientation="Horizontal" Margin="0,0,0,0.333">
-                    <TextBlock TextWrapping="Wrap" Text="Width :" Margin="0,0,10,0" VerticalAlignment="Center"/>
-                    <TextBox x:Name="txtWidth" TextWrapping="Wrap" Text="" Width="145"/>
+                <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,20">
+                    <TextBlock x:Name="lblInnerColor" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Couleur intérieure :" VerticalAlignment="Center" FontSize="30" Margin="0,0,20,0"/>
+                    <ComboBox x:Name="cbxInnerColor" Height="49" Width="177" VerticalAlignment="Center" ItemsSource="{Binding}" SelectedValuePath="Brush" DisplayMemberPath="Libelle"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Left" Width="575" Margin="0,0,0,20">
+                    <TextBlock x:Name="lblExternColor" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Couleur externe :" VerticalAlignment="Center" FontSize="30" Margin="0,0,20,0"/>
+                    <ComboBox x:Name="cbxExternColor" Height="45" Width="208" VerticalAlignment="Center" HorizontalAlignment="Left" ItemsSource="{Binding}" SelectedValuePath="Brush" DisplayMemberPath="Libelle"/>
+
+
+
+                </StackPanel>
+                <StackPanel x:Name="inputs" Height="36" Orientation="Horizontal" Margin="0,0,0,20">
+                    <StackPanel x:Name="height" Width="201" Orientation="Horizontal" Margin="0,0,20,0">
+                        <TextBlock TextWrapping="Wrap" Text="Height :" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtHeight" TextWrapping="Wrap" Text="" Width="126"/>
+                    </StackPanel>
+                    <StackPanel x:Name="width" Width="260" Orientation="Horizontal" Margin="0,0,0,0.333">
+                        <TextBlock TextWrapping="Wrap" Text="Width :" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtWidth" TextWrapping="Wrap" Text="" Width="145"/>
+                    </StackPanel>
+                </StackPanel>
+                <Button x:Name="btnValider" Content="Valider" HorizontalAlignment="Left" VerticalAlignment="Stretch" Padding="100,4" Click="btnValider_Click"/>
+            </StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Padding="0,20,0,0" Margin="0">
+                    <TextBlock TextWrapping="Wrap" Text="Type de transformation :" Margin="0" FontSize="30                            "/>
+                    <ComboBox x:Name="cbxTransform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="252" Height="52" SelectionChanged="ComboBox_SelectionChanged">
+                        <ComboBoxItem Content="Rotate"/>
+                        <ComboBoxItem Content="Translate"/>
+                        <ComboBoxItem Content="Scale"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel x:Name="stackRotate" Orientation="Horizontal" VerticalAlignment="Top" Padding="0,20,0,0" Margin="0" Visibility="Collapsed">
+                    <TextBlock TextWrapping="Wrap" Text="Degré de la rotation" Margin="0" FontSize="30                            "/>
+                    <TextBox x:Name="txtRotate" TextWrapping="Wrap" Text="" Width="304" Height="52"/>
+                </StackPanel>
+                <StackPanel x:Name="stackTranslateVert" Orientation="Horizontal" VerticalAlignment="Top" Padding="0,20,0,0" Margin="0" Visibility="Collapsed">
+                    <TextBlock TextWrapping="Wrap" Text="Déplacement vertical :" Margin="0" FontSize="30                            "/>
+                    <TextBox x:Name="txtTranslateVert" TextWrapping="Wrap" Text="" Width="304" Height="52"/>
+                </StackPanel>
+                <StackPanel x:Name="stackTranslateHor" Orientation="Horizontal" VerticalAlignment="Top" Padding="0,20,0,0" Margin="0" Visibility="Collapsed">
+                    <TextBlock TextWrapping="Wrap" Text="Déplacement horizontal:" Margin="0" FontSize="30                            "/>
+                    <TextBox x:Name="txtTranslateHor" TextWrapping="Wrap" Text="" Width="304" Height="52"/>
+                </StackPanel>
+                <StackPanel x:Name="stackScaleVert" Orientation="Horizontal" VerticalAlignment="Top" Padding="0,20,0,0" Margin="0" Visibility="Collapsed">
+                    <TextBlock TextWrapping="Wrap" Text="Echelle verticale :" Margin="0" FontSize="30                            "/>
+                    <TextBox x:Name="txtScaleVert" TextWrapping="Wrap" Text="" Width="304" Height="52"/>
+                </StackPanel>
+                <StackPanel x:Name="stackScaleHor" Orientation="Horizontal" VerticalAlignment="Top" Padding="0,20,0,0" Margin="0" Visibility="Collapsed">
+                    <TextBlock TextWrapping="Wrap" Text="Echelle horizontale :" Margin="0" FontSize="30                            "/>
+                    <TextBox x:Name="txtScaleHor" TextWrapping="Wrap" Text="" Width="304" Height="52"/>
                 </StackPanel>
             </StackPanel>
-            <Button x:Name="btnValider" Content="Valider" HorizontalAlignment="Left" VerticalAlignment="Stretch" Padding="100,4" Click="btnValider_Click"/>
         </StackPanel>
         <Grid x:Name="grille" Margin="20,307,0,0"/>
     </Grid>

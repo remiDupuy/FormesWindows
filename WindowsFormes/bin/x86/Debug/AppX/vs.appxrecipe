@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>D250-S22</Machine>
+    <Machine>D250-S21</Machine>
     <WindowsUser>dupuyr</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>9c1697a1-90a2-4b56-bb69-2fa39049e5f6</PackageIdentityName>
     <PackageIdentityPublisher>CN=dupuyr</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\C#\WindowsFormes\WindowsFormes\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\FormesWindows\WindowsFormes\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -25,16 +25,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\C#\WindowsFormes\WindowsFormes\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\FormesWindows\WindowsFormes\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-13T16:39:29.065</Modified>
+      <Modified>2017-02-15T07:42:05.461</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\bin\x86\Debug\WindowsFormes.exe">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\bin\x86\Debug\WindowsFormes.exe">
       <PackagePath>entrypoint\WindowsFormes.exe</PackagePath>
-      <Modified>2017-02-13T16:39:28.831</Modified>
+      <Modified>2017-02-15T07:42:04.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dupuyr\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -448,59 +448,59 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T21:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2017-02-13T14:10:21.157</Modified>
+      <Modified>2017-02-15T06:59:14.475</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-10-10T20:07:26.000</Modified>
+      <Modified>2017-02-15T06:59:14.466</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T20:07:26.000</Modified>
+      <Modified>2017-02-15T06:59:14.467</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T20:07:26.000</Modified>
+      <Modified>2017-02-15T06:59:14.467</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T20:07:26.000</Modified>
+      <Modified>2017-02-15T06:59:14.468</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T20:07:26.000</Modified>
+      <Modified>2017-02-15T06:59:14.469</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T20:07:26.000</Modified>
+      <Modified>2017-02-15T06:59:14.470</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T20:07:26.000</Modified>
+      <Modified>2017-02-15T06:59:14.470</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\bin\x86\Debug\WindowsFormes.xr.xml">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\bin\x86\Debug\WindowsFormes.xr.xml">
       <PackagePath>WindowsFormes.xr.xml</PackagePath>
-      <Modified>2017-02-13T16:01:08.092</Modified>
+      <Modified>2017-02-15T07:29:30.228</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2016-06-28T19:18:28.096</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2017-02-13T16:29:25.135</Modified>
+      <Modified>2017-02-15T07:42:05.339</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\C#\WindowsFormes\WindowsFormes\bin\x86\Debug\Core\WindowsFormes.exe">
+    <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\bin\x86\Debug\Core\WindowsFormes.exe">
       <PackagePath>WindowsFormes.exe</PackagePath>
-      <Modified>2017-02-13T16:39:29.063</Modified>
+      <Modified>2017-02-15T07:42:05.459</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
