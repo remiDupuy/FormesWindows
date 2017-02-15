@@ -1,0 +1,1 @@
+D:\FormesWindows\WindowsFormesMVVM\WindowsFormesMVVM.csproj;x86

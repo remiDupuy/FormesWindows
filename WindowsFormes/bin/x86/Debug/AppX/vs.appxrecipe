@@ -28,13 +28,13 @@
     <AppXManifest Include="D:\FormesWindows\WindowsFormes\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-15T07:42:05.461</Modified>
+      <Modified>2017-02-15T07:58:05.424</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\bin\x86\Debug\WindowsFormes.exe">
       <PackagePath>entrypoint\WindowsFormes.exe</PackagePath>
-      <Modified>2017-02-15T07:42:04.925</Modified>
+      <Modified>2017-02-15T07:58:04.982</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dupuyr\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -500,7 +500,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FormesWindows\WindowsFormes\bin\x86\Debug\Core\WindowsFormes.exe">
       <PackagePath>WindowsFormes.exe</PackagePath>
-      <Modified>2017-02-15T07:42:05.459</Modified>
+      <Modified>2017-02-15T07:58:05.421</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

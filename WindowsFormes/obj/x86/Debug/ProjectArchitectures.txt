@@ -1,1 +1,0 @@
-D:\FormesWindows\WindowsFormes\WindowsFormes.csproj;x86
